@@ -64,6 +64,22 @@
               background: url("./img/plus.png") right center/contain no-repeat;
               
             }
+            .s_headerform input[type=text]:focus{
+              box-shadow: none;
+            }
+            .s_headerform input[type=text]:focus + div.s_inputsearchhint{
+              display: block !important;
+            }
+            .s_inputsearchhint{
+              height: 400px;
+              
+              
+            }
+            .s_inputsearchhint a:hover{
+              background-color: #F4F8FF;
+            }
+            
+
             @media (min-width: 1400px){
                 .container, .container-lg, .container-md, .container-sm, .container-xl {
                 max-width: 1248px;
@@ -89,22 +105,64 @@
                           
                         </div>
                         <div class="col-6 s_tbdr p-2" >
-                          <form class="bg-white h-100 rounded-1 shadow-sm ">
+                          <form class="bg-white h-100 rounded-1 shadow-sm s_headerform position-relative ">
                             <div class="row">
-                              <div class="col-10 ">
-                                <input class="form-control border-0 w-75" placeholder="Search for products,brands and more" />
+                              <div class="col-11  ">
+                                <input type="text"  class="form-control border-0 s_myinput " placeholder="Search for products,brands and more" />
+                                <div class="s_inputsearchhint d-none w-100 position-absolute  bg-white shadow-sm ">
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item  border-0 w-100 d-block p-0">
+                                      <a href="#" class=" w-100 d-block p-2 ps-4 text-secondary" > <img width="30" src="./img/search/1.webp" class=" me-3"/>smart watch</a>
+                                    </li>
+                                    <li class="list-group-item border-0 p-0">
+                                      <a href="#" class=" w-100 d-block p-2 ps-4 text-secondary"   ><img width="30" src="./img/search/2.webp" class=" me-3"/>sweatshirt for men</a>
+                                    </li>
+                                    <li class="list-group-item border-0 p-0">
+                                      <a href="#" class=" w-100 d-block p-2 ps-4 text-secondary"  ><img width="30" src="./img/search/3.webp" class=" me-3" />vivo t1-pro</a>
+                                    </li>
+                                    <li class="list-group-item border-0 p-0">
+                                      <a href="#" class=" w-100 d-block p-2 ps-4 text-secondary"  ><img width="30" src="./img/search/4.webp" class=" me-3" />laptop</a>
+                                    </li>
+                                    
+                                    <li class="list-group-item border-0 p-0">
+                                      <a href="#" class=" w-100 d-block p-2 ps-4 text-secondary"  ><img width="30" src="./img/search/5.webp" class="me-3" />shoes</a>
+                                    </li>
+                                    <li class="list-group-item border-0 p-0">
+                                      <a href="#" class=" w-100 d-block p-2 ps-4 text-secondary"  ><img width="30" src="./img/search/6.webp"  class=" me-3"/>tablet</a>
+                                    </li>
+                                    <li class="list-group-item border-0 p-0">
+                                      <a href="#" class=" w-100 d-block p-2 ps-4 text-secondary"  ><img width="30" src="./img/search/400-227.webp" class=" me-3"/>football</a>
+                                    </li>
+                                    
+                                  </ul>
+                                </div>
                               </div>
-                              <div class="col-2 ">
+                              <div class="col-1 ">
                                 <button type="submit" class="btn  float-end p-1">
                                   <i class="fa-solid fa-magnifying-glass text-primary"></i>
                                 </button>
                               </div>
-                            </div>
+                        </div>
                             
                             
                           </form>
                         </div>
-                        <div class="col-5 s_tbdr">C</div>
+                        <div class="col-5 s_tbdr">
+                          <ul class="nav h-100">
+                            <li class="nav-item ">
+                              <a class="nav-link  pt-3 h-100 active text-white" aria-current="page" href="#">Login</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link   pt-3  h-100 text-white " href="#">Become a seller</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link   pt-3  h-100 text-white" href="#">More</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link   pt-3  h-100 text-white disabled"><i class="fa-solid fa-cart-shopping"></i>cart</a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                 </div>
