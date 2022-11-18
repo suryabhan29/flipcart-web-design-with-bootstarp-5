@@ -79,6 +79,32 @@
               background-color: #F4F8FF;
             }
             
+            .s_submenu{
+              height: 400px;
+              width: 280px;
+              left:-100px ;
+              top: 55px;
+            }
+
+            .arrow-up {
+               width: 0; 
+               height: 0; 
+              border-left: 15px solid transparent;
+              border-right: 15px solid transparent;
+  
+              border-bottom: 15px solid white;
+              position: absolute;
+              top: -15px;
+              left: 120px;
+
+            }
+            
+            ul.s_menu > li:hover ul.s_submenu{
+              display: block !important;
+            }
+            ul.s_submenu > li:hover{
+              background:  #F1F3F6;
+            }
 
             @media (min-width: 1400px){
                 .container, .container-lg, .container-md, .container-sm, .container-xl {
@@ -151,10 +177,42 @@
                             
                           </form>
                         </div>
-                        <div class="col-5 s_tbdr">
-                          <ul class="nav h-100">
-                            <li class="nav-item ">
-                              <a class="nav-link  pt-3 h-100 active text-white" aria-current="page" href="#">Login</a>
+                        <div class="col-5 s_tbdr h-100">
+                          <ul class="nav s_menu h-100 ">
+                            <li class="nav-item h-100 position-relative" style="cursor:pointer;">
+                              <a class="nav-link  pt-1 ps-3 h-50 rounded-1 mt-3 active text-primary bg-white a_login" aria-current="page" href="#">Login</a>
+                              <ul class= " nav flex-column s_submenu  bg-white shadow-sm position-absolute d-none"  >
+                                <div class="arrow-up"></div>
+                                <li class="nav-item">
+                                    <a href="#" class="btn btn-link text-black text-decoration-none">New customer?</a>
+                                    <a href="#" class="btn btn-link text-decoration-none">Sign up</a>
+                                </li>
+                                <li class="nav-item border-bottom">
+                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-solid fa-user me-3 text-primary"></i>My profile</a>
+                                  
+                                </li>
+                                <li class="nav-item border-bottom">
+                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-solid fa-plus me-3 text-primary"></i>Flipkart plus zone</a>
+                                  
+                                </li>
+                                <li class="nav-item border-bottom">
+                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-solid fa-user me-3 text-primary"></i>Orders</a>
+                                  
+                                </li>
+                                <li class="nav-item border-bottom">
+                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-solid fa-user me-3 text-primary"></i>Wishlist</a>
+                                  
+                                </li>
+                                <li class="nav-item border-bottom">
+                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-solid fa-user me-3 text-primary"></i>Rewards</a>
+                                  
+                                </li>
+                                <li class="nav-item ">
+                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-solid fa-user me-3 text-primary"></i>Gift card</a>
+                                  
+                                </li>
+                                
+                              </ul>   
                             </li>
                             <li class="nav-item">
                               <a class="nav-link   pt-3  h-100 text-white " href="#">Become a seller</a>
@@ -259,7 +317,7 @@
                             <img src="./img/slider/1.webp" class="d-block w-100" alt="..." style="height: 280px;">
                           </div>
                           <div class="carousel-item">
-                            <img src="./img/slider/1.webp" class="d-block w-100" alt="... style280px">
+                            <img src="./img/slider/1.webp" class="d-block w-100" alt="..." style="height: 280px;">
                           </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
