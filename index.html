@@ -17,10 +17,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
           body{
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', sans-serif !important;
           }
             .s_tbdr{
-                border: 1px dashed red;
+                border: 1px dashed black;
             }
             
             /*
@@ -105,8 +105,36 @@
               display: block !important;
             }
             ul.s_submenu > li:hover{
-              background:  #F1F3F6;
+              background:  #fafafa;
             }
+            .s_bottom_menu > li{
+              position: relative;
+            }
+            .s_bottom_submenu{
+              width: 430px;
+              height: 500px;
+              top: 95px;
+              z-index: 1;
+              left: -150px;
+            }
+            .s_bottom_menu > li:hover > ul{
+              display: block !important;
+            }
+            .s_bottom_submenu_submenu{
+              position: relative;
+            }
+            .s_bottom_submenu_submenu_submenu{
+              width: 215px;
+              height: 500px;
+              
+            }
+            .s_bottom_submenu_submenu > li:hover > ul{
+              display: block !important;
+            }
+            .s_bottom_submenu_submenu > li:first-child > ul{
+              display: block !important;
+            }
+            
 
             @media (min-width: 1400px){
                 .container, .container-lg, .container-md, .container-sm, .container-xl {
@@ -182,7 +210,7 @@
                         <div class="col-5 s_tbdr h-100">
                           <ul class="nav s_menu h-100 ">
                             <li class="nav-item h-100 position-relative" style="cursor:pointer;">
-                              <a class="nav-link  pt-1 ps-3 h-50 rounded-1 mt-3 active text-primary bg-white a_login" aria-current="page" href="#">Login</a>
+                              <a class="nav-link  pt-1 pb-3 h-50 rounded-0 mt-3 active text-primary bg-white a_login" aria-current="page" href="#">Login</a>
                               <ul class= " nav flex-column s_submenu  bg-white shadow-sm position-absolute d-none"  >
                                 <div class="arrow-up"></div>
                                 <li class="nav-item">
@@ -194,15 +222,15 @@
                                   
                                 </li>
                                 <li class="nav-item border-bottom">
-                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-solid fa-plus me-3 text-primary"></i>Flipkart plus zone</a>
+                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-thin fa-plus me-3 text-primary"></i>Flipkart plus zone</a>
                                   
                                 </li>
                                 <li class="nav-item border-bottom">
-                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-solid fa-user me-3 text-primary"></i>Orders</a>
+                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start">  <i class="fa-brands fa-jedi-order me-3 text-primary"></i>Orders</a>
                                   
                                 </li>
                                 <li class="nav-item border-bottom">
-                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-solid fa-user me-3 text-primary"></i>Wishlist</a>
+                                  <a href="#" class="btn w-100  ps-3  text-decoration-none rounded-0 text-start"> <i class="fa-solid fa-heart me-3 text-primary"></i>Wishlist</a>
                                   
                                 </li>
                                 <li class="nav-item border-bottom">
@@ -237,7 +265,7 @@
                               
                               
                               <div class="collapse navbar-collapse h-100" id="navbarNav">
-                                <ul class="navbar-nav h-100">
+                                <ul class="navbar-nav h-100 s_bottom_menu">
                                   <li class="nav-item me-4 ">
                                     <a class="nav-link active  h-100 " aria-current="page" href="#">
                                         <img class="img-fluid" width="60" src="./img/header/nav_bottom/1.webp" />
@@ -262,6 +290,92 @@
                                       <img class="img-fluid" width="60" src="./img/header/nav_bottom/4.webp" />
                                       <br>Fashions
                                   </a>
+                                  <ul class=" nav row s_bottom_submenu bg-white shadow-sm position-absolute d-none ">
+                                      <li class="col-6 ">
+                                        <ul class=" s_bottom_submenu_submenu nav nav flex-column  ">
+                                          <li class="nav-item">
+                                            <a class="nav-link active " href="#">Men's top wear</a>
+                                            <ul class=" p-2 s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow d-none nav flex-column">
+                                              <li>More in Men's Top wear</li>
+                                              <li class="nav-item">
+                                                  <a class="nav-link active" href="#" >All</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="#" >Mens'T-shirts</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="#" >Mens' casual shirts</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="#" >Mens' Formal shirts</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="#" >Mens' kurtas</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="#" >Mens' ethnic sets</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="#" >Mens' Blazers</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="#" >Mens' Rain coat</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="#" >Mens'  windchetars</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="#" >Mens' suit</a>
+                                              </li>
+                                              <li class="nav-item">
+                                                <a class="nav-link" href="#" >Mens' febrics</a>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link   " href="#">Men's bottom wear</a>
+                                            <ul class="s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow bg-white d-none"></ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link  " href="#">women ethnic</a>
+                                            <ul class="s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow bg-white d-none"></ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link " href="#">women western</a>
+                                            <ul class="s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow bg-white d-none"></ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link " href="#">men footwear</a>
+                                            <ul class="s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow bg-white d-none"></ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link  " href="#">women footwear</a>
+                                            <ul class="s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow bg-white d-none"></ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link  " href="#">Watches</a>
+                                            <ul class="s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow bg-white d-none"></ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link  " href="#">Bags,suitcases</a>
+                                            <ul class="s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow bg-white d-none"></ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link  " href="#">kids</a>
+                                            <ul class="s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow bg-white d-none"></ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link  " href="#">Essentials</a>
+                                            <ul class="s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow bg-white d-none"></ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link  " href="#">Winter</a>
+                                            <ul class="s_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow bg-white d-none"></ul>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li class="col-6 ">B</li>
+                                  </ul>
                                   </li>
                                   <li class="nav-item  me-4">
                                     <a class="nav-link active  h-100 " aria-current="page" href="#">
